@@ -1,0 +1,13 @@
+# Copy to terraform.tfvars and supply your own subscription ID.
+subscription_id = "YOUR_AZURE_SUBSCRIPTION_ID"
+location        = "eastus2"
+admin_username  = "azureuser"
+vm_size         = "Standard_D2s_v3"
+windows_image_sku = "win11-25h2-pro"
+
+# Strongly recommended: keep public IP disabled. Configure a private access path
+# (e.g. your existing private network/VPN) before trying to connect to the VM.
+create_public_ip = false
+allowed_rdp_source = ""
+
+# Do not put admin_password in this file; use TF_VAR_admin_password.
